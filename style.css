@@ -1,0 +1,469 @@
+/*=========================================
+        GOOGLE FONT
+=========================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*=========================================
+        GLOBAL
+=========================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:linear-gradient(135deg,#EEF2FF,#F8FAFC,#E0F2FE);
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+    color:#1E293B;
+
+}
+
+.container{
+
+    width:100%;
+
+    max-width:650px;
+
+}
+
+/*=========================================
+            HEADER
+=========================================*/
+
+header{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+}
+
+header h1{
+
+    font-size:3rem;
+
+    font-weight:800;
+
+    color:#4F46E5;
+
+}
+
+header h1 i{
+
+    margin-right:10px;
+
+    color:#F59E0B;
+
+}
+
+header p{
+
+    margin-top:10px;
+
+    color:#64748B;
+
+    font-size:16px;
+
+}
+
+/*=========================================
+            MAIN CARD
+=========================================*/
+
+.card{
+
+    background:rgba(255,255,255,.85);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:28px;
+
+    padding:30px;
+
+    box-shadow:
+
+        0 15px 35px rgba(0,0,0,.12);
+
+}
+
+/*=========================================
+            TIMER
+=========================================*/
+
+.timer-box{
+
+    width:270px;
+
+    height:270px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        #4F46E5,
+        #7C3AED,
+        #EC4899
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:
+
+        0 0 40px rgba(79,70,229,.25);
+
+}
+
+.timer{
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    font-size:2.8rem;
+
+    font-weight:700;
+
+    color:#1E293B;
+
+}
+
+.ms{
+
+    font-size:20px;
+
+    color:#64748B;
+
+}
+/*=========================================
+            BUTTONS
+=========================================*/
+
+.buttons{
+
+    margin-top:35px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+.buttons button{
+
+    border:none;
+
+    outline:none;
+
+    padding:15px;
+
+    border-radius:14px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.12);
+
+}
+
+.buttons button:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/*=========================================
+            BUTTON COLORS
+=========================================*/
+
+.start{
+
+    background:linear-gradient(135deg,#22C55E,#16A34A);
+
+}
+
+.pause{
+
+    background:linear-gradient(135deg,#F59E0B,#EA580C);
+
+}
+
+.reset{
+
+    background:linear-gradient(135deg,#EF4444,#DC2626);
+
+}
+
+.lap{
+
+    background:linear-gradient(135deg,#06B6D4,#0284C7);
+
+}
+
+/*=========================================
+            LAP CARD
+=========================================*/
+
+.lap-card{
+
+    margin-top:22px;
+
+    background:rgba(255,255,255,.85);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+
+    padding:22px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+}
+
+.lap-card h2{
+
+    font-size:1.4rem;
+
+    color:#4F46E5;
+
+    margin-bottom:18px;
+
+}
+
+.lap-card h2 i{
+
+    color:#F59E0B;
+
+    margin-right:8px;
+
+}
+
+/*=========================================
+            LAP LIST
+=========================================*/
+
+#lapList{
+
+    list-style:none;
+
+    max-height:180px;
+
+    overflow-y:auto;
+
+}
+
+#lapList li{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:14px 18px;
+
+    margin-bottom:12px;
+
+    background:#F8FAFC;
+
+    border-left:5px solid #4F46E5;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+#lapList li:hover{
+
+    background:#EEF2FF;
+
+    transform:translateX(6px);
+
+}
+
+#lapList li span:first-child{
+
+    font-weight:600;
+
+    color:#4F46E5;
+
+}
+
+#lapList li span:last-child{
+
+    color:#334155;
+
+}
+
+/*=========================================
+            SCROLLBAR
+=========================================*/
+
+#lapList::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+#lapList::-webkit-scrollbar-track{
+
+    background:#E2E8F0;
+
+    border-radius:10px;
+
+}
+
+#lapList::-webkit-scrollbar-thumb{
+
+    background:#4F46E5;
+
+    border-radius:10px;
+
+}
+
+/*=========================================
+            RESPONSIVE
+=========================================*/
+
+@media(max-width:650px){
+
+.container{
+
+    max-width:100%;
+
+}
+
+header h1{
+
+    font-size:2.3rem;
+
+}
+
+.timer-box{
+
+    width:220px;
+
+    height:220px;
+
+}
+
+.timer{
+
+    width:180px;
+
+    height:180px;
+
+    font-size:2rem;
+
+}
+
+.ms{
+
+    font-size:16px;
+
+}
+
+.buttons{
+
+    grid-template-columns:1fr;
+
+}
+
+.buttons button{
+
+    width:100%;
+
+}
+
+.lap-card{
+
+    padding:18px;
+
+}
+
+}
+
+/*=========================================
+            ANIMATION
+=========================================*/
+
+.card,
+.lap-card{
+
+    animation:fadeUp .7s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=========================================
+            TEXT SELECTION
+=========================================*/
+
+::selection{
+
+    background:#4F46E5;
+
+    color:white;
+
+}

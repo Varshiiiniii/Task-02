@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Stopwatch</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+
+        <header>
+
+            <h1>
+                <i class="fa-solid fa-stopwatch"></i>
+                Smart Stopwatch
+            </h1>
+
+            <p>Modern Stopwatch Web Application</p>
+
+        </header>
+
+        <!-- Stopwatch Card -->
+
+        <div class="card">
+
+            <!-- Timer -->
+
+            <div class="timer-box">
+
+                <div class="timer">
+
+                    <span id="hours">00</span>
+
+                    <span>:</span>
+
+                    <span id="minutes">00</span>
+
+                    <span>:</span>
+
+                    <span id="seconds">00</span>
+
+                    <span class="ms">
+
+                        .
+
+                        <span id="milliseconds">000</span>
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- Buttons -->
+
+            <div class="buttons">
+
+                <button id="startBtn" class="start">
+
+                    <i class="fa-solid fa-play"></i>
+
+                    Start
+
+                </button>
+
+                <button id="pauseBtn" class="pause">
+
+                    <i class="fa-solid fa-pause"></i>
+
+                    Pause
+
+                </button>
+
+                <button id="resetBtn" class="reset">
+
+                    <i class="fa-solid fa-rotate-left"></i>
+
+                    Reset
+
+                </button>
+
+                <button id="lapBtn" class="lap">
+
+                    <i class="fa-solid fa-flag-checkered"></i>
+
+                    Lap
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Lap Records -->
+
+        <div class="lap-card">
+
+            <h2>
+
+                <i class="fa-solid fa-list"></i>
+
+                Lap Records
+
+            </h2>
+
+            <ul id="lapList"></ul>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
